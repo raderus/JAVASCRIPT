@@ -1,0 +1,79 @@
+<!--Natjecanje MC2 – Tehničko Veleučilište Zagreb
+Godina 2018.
+Naziv: Priroda i društvo za 3. razred – Pojmovnik
+Autor: Radovan Rus
+Verzija: Release Canditate, RC1-->
+
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <title>Pojmovi - Priroda i društvo 3</title>
+    <link rel="stylesheet" href="css/pojmovi.css">
+    <script src="js/pojmovi.js"></script>
+</head>
+<body>
+<div class="shadow">
+<div class="wrapper main-grid">
+    <div class="top-left"></div>
+    <div class="top-right">
+        <div class="pojmovnik">
+            <h4>Pojmovi<img src="img/body/povecalo.svg" alt=""></h4>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <span class="memo-now button" style="display:none">Spreman sam. Pokreni odmah</span>
+            <div id="memo" class="picture-grid">
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="term-overlay" style="display:none"></div>
+            <div id="terms" class="term-grid">
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-container">
+            <div class="vrijeme"><div class="bottom-txt">Vrijeme:</div> <figure class="timer">0</figure></div>
+            <div class="pokusaj"><div class="bottom-txt">Pokušaja:</div> <figure class="moves">0</figure></div>
+            <div class="pogodak"><div class="bottom-txt">Pogodak bodovi:</div> <figure class="bingo">0</figure></div>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-warning">
+    <div class="mobile-wrap">
+    <h3>Okreni položeno</h3>
+        <img src="img/mobile.svg" alt="">
+    </div>
+</div>
+</div>
+<div id="modal" style="display: none;" class="hero-overlay">
+    <div class="hero-popup">
+        <a class="close" href=# >X</a>
+        <div class="hero-cloud">
+            <h2>Rezultat</h2>
+        </div>
+        <div class="statistika">
+            <p>Svih <span class="bodovi"> </span> bodova pogodaka</p>
+            <p>ostvareno je u <span class="broj-pokusaja"> </span> pokušaja</p>
+            <p>unutar  <span class="vrijeme-min"></span> minuta i  <span class="vrijeme-sec"></span> sekundi</p>
+
+            <p class="oznaka" style="display: none;">Broj bodova pogodaka <span>manji</span> od broja pokušaja. Preporuka: još vježbati pojmove.</p>
+            <p class="oznaka" style="display: none;">Broj  bodova pogodaka <span>veći</span> od broja pokušaja. Možeš na zadatke.</p>
+            <p class="oznaka" style="display: none;">"Broj pokušaja <span>jednak</span> bodovima pogodaka. Ako si spreman možeš na zadatke.</p>
+        </div>
+        <div class="buttons">
+            <a href="pojmovi.html" class="button">Ponovno pojmovi</a>
+            <a href="zadaci.html" class="button">Na zadatke</a>
+        </div>
+    </div>
+</div>
+<script src="js/pojmovi.js"></script>
+</body>
+</html>
