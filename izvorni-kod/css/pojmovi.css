@@ -395,7 +395,7 @@ h4 {
 
 .button {
   font-size: 17px;
-  font-family: 'Roboto Slab', serif;
+  /*    font-family: 'Roboto Slab', serif;*/
   outline: none;
   padding: 6px 15px;
   color: white;
@@ -591,11 +591,13 @@ a.button {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #2f82c8; }
+    color: #2f82c8;
+    cursor: pointer; }
   .hero-popup .close:hover {
     color: white;
     padding: 3px 5px;
-    background: #d30f0f; }
+    background: #d30f0f;
+    cursor: pointer; }
 
 .hero-popup .hero-cloud,
 .statistika {

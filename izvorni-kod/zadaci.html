@@ -1,10 +1,3 @@
-<!--Natjecanje MC2 – Tehničko Veleučilište Zagreb
-Godina 2018.
-Naziv: Priroda i društvo za 3. razred – Pojmovnik
-Autor: Radovan Rus
-Verzija: Release Canditate, RC1-->
-
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
@@ -21,16 +14,23 @@ Verzija: Release Canditate, RC1-->
         <div id="forma">
             <figure class="logo"><h2>Zadaci</h2></figure>
             <form onsubmit="return !!(submitFunction() & con() & submitDisable());">
-                <p>U planinskom zavičaju pušu vjetrovi Bura i Jugo?</p>
-                <div class="btn-g1">
-                    <input type="radio" class="vjetar" name="vj" id="vj1"> <label for="vj1">DA</label>
-                    <input type="radio" class="vjetar" name="vj" id="vj2"> <label for="vj2">NE</label>
-                </div>
 
                 <p>Model služi za prikazivanje većih površina na ravnom listu papira?</p>
                 <div class="btn-g2">
                     <input type="radio" class="karta" name="karta" id="k1"> <label for="k1">DA</label>
                     <input type="radio" class="karta" name="karta" id="k2"> <label for="k2">NE</label>
+                </div>
+
+                <p>Ima li Siječanj 28 dana?</p>
+                <div class="btn-g5">
+                    <input type="radio" class="dan" name="dan" id="da1"> <label for="da1">DA</label>
+                    <input type="radio" class="dan" name="dan" id="da2"> <label for="da2">NE</label>
+                </div>
+
+                <p>U planinskom zavičaju pušu vjetrovi Bura i Jugo?</p>
+                <div class="btn-g1">
+                    <input type="radio" class="vjetar" name="vj" id="vj1"> <label for="vj1">DA</label>
+                    <input type="radio" class="vjetar" name="vj" id="vj2"> <label for="vj2">NE</label>
                 </div>
 
                 <p>Kompas služi za orijentaciju u prostoru?</p>
@@ -69,6 +69,14 @@ Verzija: Release Canditate, RC1-->
                         <input type="radio" class="zem" name="zem" id="ze4">  <label for="ze4">Model</label>
                     </div>
 
+                <p>Som, štuka i šaran žive u:</p>
+                <div class="btn-l4">
+                    <input type="radio" class="riba" name="riba" id="ri1">  <label for="ri1">More</label>
+                    <input type="radio" class="riba" name="riba" id="ri2"> <label for="ri2">Bara</label>
+                    <input type="radio" class="riba" name="riba" id="ri3">  <label for="ri3">Ocean</label>
+                    <input type="radio" class="riba" name="riba" id="ri4">  <label for="ri4">Vode tekućice</label>
+                </div>
+
                 <div class="unesi1">
                     <p>Određivanje strana svijeta i smjera kretanja u prostoru zovemo <input type="text" class="orijent" placeholder="unesi pojam"></p>
                     <span class="obv-text1"></span>
@@ -76,6 +84,10 @@ Verzija: Release Canditate, RC1-->
                 <div class="unesi2">
                     <p><input type="text" class="tlocrt" placeholder="unesi pojam"> je crtež predmeta gledan odozgo</p>
                     <span class="obv-text2"></span>
+                </div>
+                <div class="unesi3">
+                    <p>Najmanje stanovnika živi u <input type="text" class="gora" placeholder="unesi pojam"> zavičaju</p>
+                    <span class="obv-text3"></span>
                 </div>
 
               <input type="submit" value="Predaj" class="submit" id="submit">
@@ -98,7 +110,7 @@ Verzija: Release Canditate, RC1-->
         </div>
         <div class="statistika">
             <p>Na zadacima osvojeno <span class="bodovi"> </span> bod/a/ova</p>
-            <p><span class="postoci"> </span> % <span class="ocjena"></span></p>
+            <p><span class="postoci"> </span> <span class="ocjena"></span></p>
             <p>Što želiš dalje?</p>
         </div>
       <div class="buttons">

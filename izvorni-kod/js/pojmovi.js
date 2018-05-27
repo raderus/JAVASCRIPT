@@ -1,5 +1,3 @@
-
-
 // Card data
 var cardsArray = [
     {

@@ -123,12 +123,13 @@
       font-weight: bold;
       text-decoration: none;
       color: $darkblue;
+      cursor: pointer;
     }
     .close:hover {
       color: white;
       padding: 3px 5px;
       background: #d30f0f;
-
+      cursor: pointer;
     }
   }
   .hero-popup .hero-cloud,
@@ -162,7 +163,7 @@
   }
   .button {
     font-size: 17px;
-    font-family: 'Roboto Slab', serif;
+/*    font-family: 'Roboto Slab', serif;*/
     outline: none;
     padding: 6px 15px;
     color: $white;
