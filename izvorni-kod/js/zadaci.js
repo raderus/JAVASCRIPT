@@ -131,7 +131,7 @@ const submitFunction = () => {
     const gorski = document.querySelector(".gora").value;
     const gora = gorski.replace(/\s+/g, '').toLowerCase();
 
-    if (ori === "orijentacija") {
+    if (ori === "orijentacija" || ori === "orjentacija") {
         counter++;
         const da = document.createElement('span');
         da.setAttribute('class', 'da');
@@ -153,7 +153,7 @@ const submitFunction = () => {
         unesi2.appendChild(ne);
     };
 
-    if (gora === "gorskom") {
+    if (gora === "gorskom" || gora === "gorski") {
         counter++;
         const da = document.createElement('span');
         da.setAttribute('class', 'da');

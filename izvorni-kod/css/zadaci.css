@@ -26,6 +26,9 @@ h1, h2, h3 {
     margin: 0 0 65px 0; }
   #forma span {
     color: red; }
+  @media screen and (min-width: 769px) {
+    #forma {
+      position: relative; } }
 
 .logo {
   background: url("../img/body/oblak-pojmovnik-v.svg") no-repeat center center/100%;
@@ -38,7 +41,21 @@ h1, h2, h3 {
   .logo h2 {
     font-weight: 300;
     font-size: 2.2em; }
+  @media screen and (min-width: 769px) {
+    .logo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-80px, 60px);
+      width: 340px;
+      height: 180px; }
+      .logo h2 {
+        font-weight: 300;
+        font-size: 3.4em; } }
 
+@media screen and (min-width: 769px) {
+  form {
+    margin-top: 50px; } }
 label {
   margin-right: 15px; }
 
@@ -100,6 +117,9 @@ input[type="radio"] {
   height: 0;
   visibility: hidden; }
 
+input[type="radio"]:checked + label {
+  font-weight: 500; }
+
 .label-focus {
   opacity: 0.5; }
 
@@ -116,16 +136,20 @@ input[type="radio"] {
     background: url("../img/body/btn-zeleni.svg") no-repeat center center/100%; }
 
 .btn-l1 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%;
+  color: #93479b !important; }
 
 .btn-l1 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%;
+  color: #f76423 !important; }
 
 .btn-l1 input[type="radio"]:checked + label:nth-child(6) {
-  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%;
+  color: #009fe3 !important; }
 
 .btn-l1 input[type="radio"]:checked + label:nth-child(8) {
-  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%;
+  color: #5b9800 !important; }
 
 .btn-l2 label {
   width: 180px;
@@ -140,16 +164,20 @@ input[type="radio"] {
     background: url("../img/body/btn-ljubicasti.svg") no-repeat center center/100%; }
 
 .btn-l2 input[type="radio"]:checked + label:nth-child(8) {
-  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%;
+  color: #93479b !important; }
 
 .btn-l2 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%;
+  color: #f76423 !important; }
 
 .btn-l2 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%;
+  color: #009fe3 !important; }
 
 .btn-l2 input[type="radio"]:checked + label:nth-child(6) {
-  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%;
+  color: #5b9800 !important; }
 
 .btn-l3 label {
   width: 180px;
@@ -164,16 +192,20 @@ input[type="radio"] {
     background: url("../img/body/btn-plavi.svg") no-repeat center center/100%; }
 
 .btn-l3 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%;
+  color: #93479b !important; }
 
 .btn-l3 input[type="radio"]:checked + label:nth-child(6) {
-  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%;
+  color: #f76423 !important; }
 
 .btn-l3 input[type="radio"]:checked + label:nth-child(8) {
-  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%;
+  color: #009fe3 !important; }
 
 .btn-l3 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%;
+  color: #5b9800 !important; }
 
 .btn-l4 label {
   width: 180px;
@@ -188,16 +220,20 @@ input[type="radio"] {
     background: url("../img/body/btn-plavi.svg") no-repeat center center/100%; }
 
 .btn-l4 input[type="radio"]:checked + label:nth-child(6) {
-  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-ljubicasti-checked.svg") no-repeat center center/100%;
+  color: #93479b !important; }
 
 .btn-l4 input[type="radio"]:checked + label:nth-child(8) {
-  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-narancasti-checked.svg") no-repeat center center/100%;
+  color: #f76423 !important; }
 
 .btn-l4 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-plavi-checked.svg") no-repeat center center/100%;
+  color: #009fe3 !important; }
 
 .btn-l4 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%; }
+  background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%;
+  color: #5b9800 !important; }
 
 .btn-g2 label, .btn-g1 label, .btn-g4 label {
   width: 100px;
@@ -216,16 +252,20 @@ input[type="radio"] {
     background: url("../img/body/btn-mali-lila.svg") no-repeat center center/95%; }
 
 .btn-g2 input[type="radio"]:checked + label:nth-child(4), .btn-g1 input[type="radio"]:checked + label:nth-child(4), .btn-g4 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%; }
+  background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%;
+  color: #5b9800 !important; }
 
 .btn-g2 input[type="radio"]:checked + label:nth-child(2), .btn-g1 input[type="radio"]:checked + label:nth-child(2), .btn-g4 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%; }
+  background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%;
+  color: #e6007e !important; }
 
 .btn-g5 input[type="radio"]:checked + label:nth-child(4), .btn-g3 input[type="radio"]:checked + label:nth-child(4) {
-  background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%; }
+  background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%;
+  color: #e6007e !important; }
 
 .btn-g5 input[type="radio"]:checked + label:nth-child(2), .btn-g3 input[type="radio"]:checked + label:nth-child(2) {
-  background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%; }
+  background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%;
+  color: #5b9800 !important; }
 
 #forma form p {
   margin: 0 0 10px 0;
