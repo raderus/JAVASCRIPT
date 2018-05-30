@@ -1,7 +1,7 @@
 @import "partials/variables";
 @import "partials/mixins";
 @include body;
-/*body {font-size: 18px;}*/
+body {font-size: 18px;}
 #forma {
   background: url("../img/body/oblaci-grupa.svg") top right no-repeat / 50%;
   padding: 20px 30px;
@@ -60,7 +60,7 @@ input[type="text"] {
 }
 .submit {
   font-size: 17px;
-/*  font-family: 'Roboto Slab', serif;*/
+  font-family: 'Roboto Slab', serif;
   outline: none;
   width: 100px;
   height: 36px;
@@ -68,6 +68,7 @@ input[type="text"] {
   border: none;
   transition: ease-in .3s;
   cursor: pointer;
+  border-radius: 14px;
   @include blueBox;
   &:hover {
     @include blueBoxHover;
@@ -234,7 +235,7 @@ input[type="radio"]:checked + label {font-weight: 500;}
 }
 
 
-.btn-g2 label, .btn-g1 label, .btn-g4 label {
+.btn-g2 label, .btn-g4 label {
   width: 100px;
   height: 50px;
   &:nth-child(2) {
@@ -244,7 +245,7 @@ input[type="radio"]:checked + label {font-weight: 500;}
     background: url("../img/body/btn-mali-zeleni.svg") $img95;
   }
 }
-.btn-g5 label, .btn-g3 label {
+.btn-g1 label, .btn-g3 label {
   width: 100px;
   height: 50px;
   &:nth-child(2) {
@@ -254,20 +255,20 @@ input[type="radio"]:checked + label {font-weight: 500;}
     background: url("../img/body/btn-mali-lila.svg") $img95;
   }
 }
-.btn-g2 input[type="radio"]:checked + label:nth-child(4), .btn-g1 input[type="radio"]:checked + label:nth-child(4), .btn-g4 input[type="radio"]:checked + label:nth-child(4) {
+.btn-g2 input[type="radio"]:checked + label:nth-child(4), .btn-g4 input[type="radio"]:checked + label:nth-child(4) {
   background: url("../img/body/btn-mali-zeleni-checked.svg") $img95;
   color: $greenM !important;
 }
-.btn-g2 input[type="radio"]:checked + label:nth-child(2), .btn-g1 input[type="radio"]:checked + label:nth-child(2), .btn-g4 input[type="radio"]:checked + label:nth-child(2) {
+.btn-g2 input[type="radio"]:checked + label:nth-child(2), .btn-g4 input[type="radio"]:checked + label:nth-child(2) {
   background: url("../img/body/btn-mali-lila-checked.svg") $img95;
   color: $lilac !important;
 }
 
-.btn-g5 input[type="radio"]:checked + label:nth-child(4), .btn-g3 input[type="radio"]:checked + label:nth-child(4) {
+.btn-g1 input[type="radio"]:checked + label:nth-child(4), .btn-g3 input[type="radio"]:checked + label:nth-child(4) {
   background: url("../img/body/btn-mali-lila-checked.svg") $img95;
   color: $lilac !important;
 }
-.btn-g5 input[type="radio"]:checked + label:nth-child(2), .btn-g3 input[type="radio"]:checked + label:nth-child(2) {
+.btn-g1 input[type="radio"]:checked + label:nth-child(2), .btn-g3 input[type="radio"]:checked + label:nth-child(2) {
   background: url("../img/body/btn-mali-zeleni-checked.svg") $img95;
   color: $greenM !important;
 }

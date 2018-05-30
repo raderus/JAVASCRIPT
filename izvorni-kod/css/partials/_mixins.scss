@@ -163,13 +163,14 @@
   }
   .button {
     font-size: 17px;
-/*    font-family: 'Roboto Slab', serif;*/
+    font-family: 'Roboto Slab', serif;
     outline: none;
     padding: 6px 15px;
     color: $white;
     border: none;
     transition: ease-in .3s;
     cursor: pointer;
+    border-radius: 14px;
     @include blueBox;
     &:hover {
       @include blueBoxHover;

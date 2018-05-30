@@ -146,11 +146,11 @@ h4 {
 }
 .back {
   transform: rotateY(180deg);
-  background-size: contain;
+  background-size: 98%;
   background-repeat: no-repeat;
   background-position: center center;
-/*  border-radius: 20px;*/
 }
+
 #memo .grid .selected {
   transform: rotateY(180deg);
 }
@@ -320,6 +320,11 @@ h4 {
 }
 .card.match .front {
   background: url("../img/pojmovi/checked.svg") $imgBackground;
+  opacity: 0.80;
+}
+.card.match .back {
+  backface-visibility: visible;
+  background-size: 99%;
 }
 .oznaka {font-weight: bold;}
 .oznaka span {

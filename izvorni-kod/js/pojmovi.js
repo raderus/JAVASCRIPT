@@ -320,7 +320,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = minute+". "+second;
+        timer.innerHTML = minute + ":" + second;
         second++;
         if(second == 60){
             minute++;

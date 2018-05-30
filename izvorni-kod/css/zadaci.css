@@ -18,7 +18,9 @@ h1, h2, h3 {
   margin: 0 auto;
   background-color: #C0FBFF; }
 
-/*body {font-size: 18px;}*/
+body {
+  font-size: 18px; }
+
 #forma {
   background: url("../img/body/oblaci-grupa.svg") top right no-repeat/50%;
   padding: 20px 30px; }
@@ -77,7 +79,7 @@ input[type="text"] {
 
 .submit {
   font-size: 17px;
-  /*  font-family: 'Roboto Slab', serif;*/
+  font-family: 'Roboto Slab', serif;
   outline: none;
   width: 100px;
   height: 36px;
@@ -85,6 +87,7 @@ input[type="text"] {
   border: none;
   transition: ease-in .3s;
   cursor: pointer;
+  border-radius: 14px;
   background: -webkit-linear-gradient(to right, #0056A4, #0075BE);
   background: linear-gradient(to right, #0056A4, #0075BE); }
   .submit:hover {
@@ -235,35 +238,35 @@ input[type="radio"]:checked + label {
   background: url("../img/body/btn-zeleni-checked.svg") no-repeat center center/100%;
   color: #5b9800 !important; }
 
-.btn-g2 label, .btn-g1 label, .btn-g4 label {
+.btn-g2 label, .btn-g4 label {
   width: 100px;
   height: 50px; }
-  .btn-g2 label:nth-child(2), .btn-g1 label:nth-child(2), .btn-g4 label:nth-child(2) {
+  .btn-g2 label:nth-child(2), .btn-g4 label:nth-child(2) {
     background: url("../img/body/btn-mali-lila.svg") no-repeat center center/95%; }
-  .btn-g2 label:nth-child(4), .btn-g1 label:nth-child(4), .btn-g4 label:nth-child(4) {
+  .btn-g2 label:nth-child(4), .btn-g4 label:nth-child(4) {
     background: url("../img/body/btn-mali-zeleni.svg") no-repeat center center/95%; }
 
-.btn-g5 label, .btn-g3 label {
+.btn-g1 label, .btn-g3 label {
   width: 100px;
   height: 50px; }
-  .btn-g5 label:nth-child(2), .btn-g3 label:nth-child(2) {
+  .btn-g1 label:nth-child(2), .btn-g3 label:nth-child(2) {
     background: url("../img/body/btn-mali-zeleni.svg") no-repeat center center/95%; }
-  .btn-g5 label:nth-child(4), .btn-g3 label:nth-child(4) {
+  .btn-g1 label:nth-child(4), .btn-g3 label:nth-child(4) {
     background: url("../img/body/btn-mali-lila.svg") no-repeat center center/95%; }
 
-.btn-g2 input[type="radio"]:checked + label:nth-child(4), .btn-g1 input[type="radio"]:checked + label:nth-child(4), .btn-g4 input[type="radio"]:checked + label:nth-child(4) {
+.btn-g2 input[type="radio"]:checked + label:nth-child(4), .btn-g4 input[type="radio"]:checked + label:nth-child(4) {
   background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%;
   color: #5b9800 !important; }
 
-.btn-g2 input[type="radio"]:checked + label:nth-child(2), .btn-g1 input[type="radio"]:checked + label:nth-child(2), .btn-g4 input[type="radio"]:checked + label:nth-child(2) {
+.btn-g2 input[type="radio"]:checked + label:nth-child(2), .btn-g4 input[type="radio"]:checked + label:nth-child(2) {
   background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%;
   color: #e6007e !important; }
 
-.btn-g5 input[type="radio"]:checked + label:nth-child(4), .btn-g3 input[type="radio"]:checked + label:nth-child(4) {
+.btn-g1 input[type="radio"]:checked + label:nth-child(4), .btn-g3 input[type="radio"]:checked + label:nth-child(4) {
   background: url("../img/body/btn-mali-lila-checked.svg") no-repeat center center/95%;
   color: #e6007e !important; }
 
-.btn-g5 input[type="radio"]:checked + label:nth-child(2), .btn-g3 input[type="radio"]:checked + label:nth-child(2) {
+.btn-g1 input[type="radio"]:checked + label:nth-child(2), .btn-g3 input[type="radio"]:checked + label:nth-child(2) {
   background: url("../img/body/btn-mali-zeleni-checked.svg") no-repeat center center/95%;
   color: #5b9800 !important; }
 
@@ -325,13 +328,14 @@ input[type="radio"]:checked + label {
 
 .button {
   font-size: 17px;
-  /*    font-family: 'Roboto Slab', serif;*/
+  font-family: 'Roboto Slab', serif;
   outline: none;
   padding: 6px 15px;
   color: white;
   border: none;
   transition: ease-in .3s;
   cursor: pointer;
+  border-radius: 14px;
   background: -webkit-linear-gradient(to right, #0056A4, #0075BE);
   background: linear-gradient(to right, #0056A4, #0075BE); }
   .button:hover {

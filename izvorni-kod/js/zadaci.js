@@ -71,7 +71,7 @@ const submitFunction = () => {
         ne.setAttribute('class', 'ne');
         btnG4.appendChild(ne);
     };
-    if (dan[0].checked) {
+/*    if (dan[0].checked) {
         counter++;
         const da = document.createElement('span');
         da.setAttribute('class', 'da');
@@ -80,7 +80,7 @@ const submitFunction = () => {
         const ne = document.createElement('span');
         ne.setAttribute('class', 'ne');
         btnG5.appendChild(ne);
-    };
+    };*/
     if (nizina[2].checked) {
         counter++;
         const da = document.createElement('span');
@@ -131,7 +131,7 @@ const submitFunction = () => {
     const gorski = document.querySelector(".gora").value;
     const gora = gorski.replace(/\s+/g, '').toLowerCase();
 
-    if (ori === "orijentacija" || ori === "orjentacija") {
+    if (ori === "orijentacija" || ori === "orjentacija" || ori === "orjentiranje" || ori === "orijentiranje") {
         counter++;
         const da = document.createElement('span');
         da.setAttribute('class', 'da');
@@ -153,7 +153,7 @@ const submitFunction = () => {
         unesi2.appendChild(ne);
     };
 
-    if (gora === "gorskom" || gora === "gorski") {
+    if (gora === "gorskom" || gora === "gorski" || gora === "planinski" || gora === "planinskom") {
         counter++;
         const da = document.createElement('span');
         da.setAttribute('class', 'da');
@@ -172,7 +172,7 @@ const con = () => {
     let post = counter /12 * 100;
     post = Math.round(post) / 1;
     postoci.innerHTML = counter + " / 12";
-    if(post < 50) ocjena.innerHTML = "Niste osvojili dovoljno bodova. Još vježbati pojmove.";
+    if(post < 50) ocjena.innerHTML = "Broj bodova nije dovoljan. Još vježbati pojmove.";
     if(post >= 50 && post < 64) ocjena.innerHTML = "vaša ocjena je 2";
     if(post >= 64 && post < 76) ocjena.innerHTML = "vaša ocjena je 3";
     if(post >= 76 && post < 88) ocjena.innerHTML = "vaša ocjena je 4";
