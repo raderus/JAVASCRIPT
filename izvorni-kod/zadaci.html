@@ -15,13 +15,6 @@
             <figure class="logo"><h2>Zadaci</h2></figure>
             <form onsubmit="return !!(submitFunction() & con() & submitDisable());">
 
-
-                <!--<p>Ima li Siječanj 28 dana?</p>
-                <div class="btn-g5">
-                    <input type="radio" class="dan" name="dan" id="da1"> <label for="da1">DA</label>
-                    <input type="radio" class="dan" name="dan" id="da2"> <label for="da2">NE</label>
-                </div>-->
-
                 <p>U planinskom zavičaju pušu vjetrovi bura i jugo?</p>
                 <div class="btn-g1">
                     <input type="radio" class="vjetar" name="vj" id="vj1"> <label for="vj1">DA</label>
@@ -45,6 +38,7 @@
                     <input type="radio" class="obzor" name="obzor" id="ob1"> <label for="ob1">DA</label>
                     <input type="radio" class="obzor" name="obzor" id="ob2"> <label for="ob2">NE</label>
                 </div>
+
 
                 <p>Na sjeveru naše domovine smješten je:</p>
                 <div class="btn-l1">
@@ -91,9 +85,31 @@
                     <span class="obv-text3"></span>
                 </div>
 
-              <input type="submit" value="Predaj" class="submit" id="submit">
+
+                <p>Pridruži pojam odgovarajućoj boji kod oznaka na geografskoj karti</p>
+                <section class="wrapper-pog">
+                    <section class="gore">
+                        <div id="p1" class="p1" draggable="true" ondragstart="dragStart(event)">Granice država</div>
+                        <div id="p2" class="p2" draggable="true" ondragstart="dragStart(event)">Ceste</div>
+                    </section>
+
+                    <section class="dolje">
+                        <div class="spremnik1" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                            <div class="p3">Crveno</div>
+                        </div>
+                        <div class="spremnik2" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                            <div class="p4">Ljubičasto</div>
+                        </div>
+                    </section>
+
+                </section>
+
+
+              <input type="submit" value="Predaj" class="submit button" id="submit">
+                <section class="zadaci-after-modal">
                 <a href="zadaci.html" class="button" style="display: none;">Ponovno zadatke</a>
                 <a href="pojmovi.html" class="button" style="display: none;">Na pojmove</a>
+                </section>
             </form>
         </div>
 
@@ -123,5 +139,6 @@
 </div>
 
 <script src="js/zadaci.js"></script>
+<script src="js/DragDropTouch.js"></script>
 </body>
 </html>

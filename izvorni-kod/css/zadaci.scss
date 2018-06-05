@@ -46,7 +46,7 @@ input[type="text"] {
   height: 46px;
   text-align: center;
   line-height: 1.4em;
-  border: 0px solid lightgrey;
+  border: none;
   padding: 0 15px;
   font-size: 1rem;
   margin: 0 5px;
@@ -59,7 +59,7 @@ input[type="text"] {
   }
 }
 .submit {
-  font-size: 17px;
+/*  font-size: 17px;
   font-family: 'Roboto Slab', serif;
   outline: none;
   width: 100px;
@@ -75,7 +75,7 @@ input[type="text"] {
   }
   &:active {
     @include blueBoxActive;
-  }
+  }*/
 }
 #forma form div {
   display: flex;
@@ -331,4 +331,65 @@ input[type="radio"]:checked + label {font-weight: 500;}
     margin: 60px 0;
     @include mainShadow;
   }
+}
+
+.wrapper-pog {
+  max-width: 500px;
+  min-height: 200px;
+  position: relative;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+}
+.p1, .p2, .p3, .p4 {
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+  @include flexCenter;
+}
+.p1, .p2 {
+  margin: 10px !important;
+}
+.p3, .p4 {
+  margin: 10px !important;
+}
+.p1 {
+   background: url("../img/body/btn-narancasti.svg") $imgBackground;
+ }
+.p2 {
+  background: url("../img/body/btn-plavi.svg") $imgBackground;
+}
+.p3 {
+  background: url("../img/body/btn-crveni.svg") $imgBackground;
+}
+.p4 {
+  background: url("../img/body/btn-ljubicasti.svg") $imgBackground;
+}
+.dolje {
+  display: flex;
+  margin: 20px 0 40px 0;
+  flex-wrap: wrap;
+}
+.gore {
+  display: flex;
+  min-height: 70px;
+  flex-wrap: wrap;
+}
+.spremnik1, .spremnik2 {
+  display: flex;
+  max-width: 210px !important;
+  min-height: 180px;
+  align-items: flex-end;
+  border: 2px dashed $darkblue;
+  border-radius: 10px;
+  justify-content: center;
+  margin: 0 10px 0 0 !important;
+  @media screen and (max-width: 486px) {
+    margin: 10px 0 0 0 !important;
+  }
+}
+.zadaci-after-modal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

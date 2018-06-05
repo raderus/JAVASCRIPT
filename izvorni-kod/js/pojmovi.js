@@ -135,9 +135,23 @@ mainRight.forEach(function (item) {
     var txt = document.createElement('a');
     txt.classList.add('txt');
     txt.classList.add('popup');
-    // Popup Tooltip with funcions
-    txt.addEventListener('mouseover',createTip);
-    txt.addEventListener('mouseout',cancelTip);
+
+    // Safari iOS bug fix
+    function isAppleDevice() {
+        return (
+            (navigator.userAgent.toLowerCase().indexOf("ipad") > -1) ||
+            (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
+            (navigator.userAgent.toLowerCase().indexOf("ipod") > -1)
+        );
+    }
+    /*if (isAppleDevice()) {
+        txt.addEventListener('touchstart',createTip);
+        txt.addEventListener('touchend',cancelTip);
+    } else {*/
+        // Popup Tooltip with funcions
+        txt.addEventListener('mouseover',createTip);
+        txt.addEventListener('mouseout',cancelTip);
+    /*}*/
 
     // Append elements to the section
     pojmovi.appendChild(ime);
@@ -192,7 +206,7 @@ var termOverlay = document.querySelector(".term-overlay");
 function timeShow() {
     timeGrid.classList.add("timeShow");
     termOverlay.style.display="block";
-    memoNow.style.display = "inline-block";
+    memoNow.style.display = "flex";
 }
 timeShow();
 var cancelTimeShow = function cancelTimeShow() {

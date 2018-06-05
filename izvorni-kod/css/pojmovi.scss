@@ -7,7 +7,7 @@
 body {color: $darkblue}
 h4 {
   font-family: 'Roboto Slab', serif;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 300;
 }
 .main-grid {
@@ -78,7 +78,7 @@ h4 {
 }
 .txt {
   background: url("../img/body/pojam-bijelo.svg") no-repeat center center / 100%;
-  height: 42px;
+  height: 44px;
   width: 170px;
   text-decoration: none;
   display: inline-block;
@@ -145,6 +145,8 @@ h4 {
   background: url('../img/pojmovi/oko.svg') $imgBackground;
 }
 .back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   background-size: 98%;
   background-repeat: no-repeat;
@@ -152,6 +154,8 @@ h4 {
 }
 
 #memo .grid .selected {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -341,7 +345,7 @@ h4 {
   left: 50%;
   bottom: 0;
   cursor: pointer;
-  transform: translate(-50%, 40px);
+  transform: translate(-50%, 47px);
   z-index: 550;
 
   animation-name: memoNow;
@@ -384,3 +388,4 @@ h4 {
 @include mobileWarning;
 @include popup;
 @include modal;
+

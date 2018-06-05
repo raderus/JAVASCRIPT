@@ -3,7 +3,6 @@ const obzor = Array.from(document.getElementsByClassName("obzor"));
 const karta = Array.from(document.getElementsByClassName("karta"));
 const kompas = Array.from(document.getElementsByClassName("kompas"));
 const vjetar = Array.from(document.getElementsByClassName("vjetar"));
-const dan = Array.from(document.getElementsByClassName("dan"));
 const nizina = Array.from(document.getElementsByClassName("nizina"));
 const razv = Array.from(document.getElementsByClassName("razv"));
 const zem = Array.from(document.getElementsByClassName("zem"));
@@ -16,7 +15,6 @@ const btnG1 = document.querySelector(".btn-g1");
 const btnG2 = document.querySelector(".btn-g2");
 const btnG3 = document.querySelector(".btn-g3");
 const btnG4 = document.querySelector(".btn-g4");
-const btnG5 = document.querySelector(".btn-g5");
 const btnL1 = document.querySelector(".btn-l1");
 const btnL2 = document.querySelector(".btn-l2");
 const btnL3 = document.querySelector(".btn-l3");
@@ -26,6 +24,8 @@ const unesi2 = document.querySelector(".unesi2");
 const unesi3 = document.querySelector(".unesi3");
 const submn = document.getElementById("submit");
 const button = document.querySelectorAll("form a.button");
+const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
 
 let counter = 0;
 
@@ -71,16 +71,7 @@ const submitFunction = () => {
         ne.setAttribute('class', 'ne');
         btnG4.appendChild(ne);
     };
-/*    if (dan[0].checked) {
-        counter++;
-        const da = document.createElement('span');
-        da.setAttribute('class', 'da');
-        btnG5.appendChild(da);
-    } else {
-        const ne = document.createElement('span');
-        ne.setAttribute('class', 'ne');
-        btnG5.appendChild(ne);
-    };*/
+
     if (nizina[2].checked) {
         counter++;
         const da = document.createElement('span');
@@ -164,6 +155,18 @@ const submitFunction = () => {
         unesi3.appendChild(ne);
     };
 
+    if (p1.parentNode.classList.contains('spremnik2') && p2.parentNode.classList.contains('spremnik1')) {
+        counter++
+        const da = document.createElement('span');
+        da.setAttribute('class', 'da');
+        document.querySelector('.dolje').appendChild(da);
+    } else {
+        const ne = document.createElement('span');
+        ne.setAttribute('class', 'ne');
+        document.querySelector('.dolje').appendChild(ne);
+    };
+
+
 }
 
 const con = () => {
@@ -180,7 +183,7 @@ const con = () => {
 
     submn.style.display = "none";
     button.forEach( function(item) {
-        item.style.display = "inline-block";
+        item.style.display = "flex";
     });
 
     const inputAllBlock = document.querySelectorAll("input[type=text]");
@@ -213,6 +216,33 @@ const submitDisable = () => {
     submn.style.opacity = "0.6";
 }
 
+/* Drag & Drop */
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+// function called when the drag operation starts
+function dragStart(ev) {
+    ev.dataTransfer.setData('Text', ev.target.id);
+}
+// function called when the dragged element is dropped
+function drop(ev, el) {
+    ev.preventDefault();
+    const drag_data = ev.dataTransfer.getData('Text');
+    const dragstor = document.getElementById(drag_data);
+
+    el.appendChild(dragstor);
+}
+
+p1.addEventListener('touchstart', function(e) {
+    document.documentElement.style.overflow = 'hidden';
+});
+p2.addEventListener('touchstart', function(e) {
+    document.documentElement.style.overflow = 'hidden';
+});
+
+document.addEventListener('touchend', function(e) {
+    document.documentElement.style.overflow = 'auto';
+});
 
 
 

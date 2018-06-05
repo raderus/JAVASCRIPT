@@ -106,7 +106,7 @@ h3 {
 }
 .pojmovnik {
   @include flexCenter;
-  transform: translate(-15px, 10px);
+  transform: translate(-1px, 3px);
   @media screen and (min-width: 569px) and (max-width: 729px) {
     transform: translate(5px, 35px);
     h1 {font-size:34px;}
@@ -342,38 +342,30 @@ h3 {
 }
 .button-animation {
   display: flex;
-  width: 130px;
+  width: 180px;
   margin: 0 7% 0 auto;
 }
 .kreni {
-  display: flex;
-  align-items: center;
-  width: 105px;
-  background: #0056A4;
-  background: -webkit-linear-gradient(to right, #0056A4, #0075BE);
-  background: linear-gradient(to right, #0056A4, #0075BE);
-  transition: width 0.3s;
   a {
-    padding: 8px 15px;
+    padding-left: 35px;
     color: white;
     text-decoration: none;
     position: relative;
     width: 100%;
     display: block;
-    line-height: 23px;
+    line-height: 40px;
+    font-size: 18px;
   }
   .icon {
-    width: 20px;
-    height: 23px;
-    line-height: 23px;
+    width: 18px;
+    height: 20px;
+    line-height: 20px;
     display: inline-block;
     position: absolute;
-    right: 15px;
-    bottom: 8px;
+    right: 25px;
+    bottom: 10px;
   }
-  &:hover {
-    width: 120px;
-  }
+
 }
 .bullets a {
   color: inherit;
@@ -442,3 +434,4 @@ h3 {
     @include mainShadow;
   }
 }
+@include button;

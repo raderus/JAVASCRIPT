@@ -94,6 +94,9 @@
     overflow: auto;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 480px) {
+      padding-top: 20px;
+    }
   }
   .hero-overlay:target {
     visibility: visible;
@@ -165,20 +168,23 @@
     font-size: 17px;
     font-family: 'Roboto Slab', serif;
     outline: none;
-    padding: 6px 15px;
+    height: 60px;
+    width: 180px;
+    line-height: 40px;
     color: $white;
     border: none;
     transition: ease-in .3s;
     cursor: pointer;
-    border-radius: 14px;
-    @include blueBox;
+    @include flexCenter;
+    background: url("../img/body/btn-link.svg") $imgBackground;
     &:hover {
-      @include blueBoxHover;
+      background: url("../img/body/btn-link-hover.svg") $imgBackground;
     }
     &:active {
-      @include blueBoxActive;
+      background: url("../img/body/btn-link-active.svg") $imgBackground;
     }
   }
+
   a.button {
     text-decoration: none;
     margin: 0 20px 10px 0;

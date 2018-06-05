@@ -125,7 +125,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-15px, 10px); }
+  transform: translate(-1px, 3px); }
   @media screen and (min-width: 569px) and (max-width: 729px) {
     .pojmovnik {
       transform: translate(5px, 35px); }
@@ -364,35 +364,26 @@ h3 {
 
 .button-animation {
   display: flex;
-  width: 130px;
+  width: 180px;
   margin: 0 7% 0 auto; }
 
-.kreni {
-  display: flex;
-  align-items: center;
-  width: 105px;
-  background: #0056A4;
-  background: -webkit-linear-gradient(to right, #0056A4, #0075BE);
-  background: linear-gradient(to right, #0056A4, #0075BE);
-  transition: width 0.3s; }
-  .kreni a {
-    padding: 8px 15px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    width: 100%;
-    display: block;
-    line-height: 23px; }
-  .kreni .icon {
-    width: 20px;
-    height: 23px;
-    line-height: 23px;
-    display: inline-block;
-    position: absolute;
-    right: 15px;
-    bottom: 8px; }
-  .kreni:hover {
-    width: 120px; }
+.kreni a {
+  padding-left: 35px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: block;
+  line-height: 40px;
+  font-size: 18px; }
+.kreni .icon {
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  bottom: 10px; }
 
 .bullets a {
   color: inherit;
@@ -455,5 +446,34 @@ h3 {
     -webkit-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.25); } }
+.buttons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.button {
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  outline: none;
+  height: 60px;
+  width: 180px;
+  line-height: 40px;
+  color: white;
+  border: none;
+  transition: ease-in .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/body/btn-link.svg") no-repeat center center/100%; }
+  .button:hover {
+    background: url("../img/body/btn-link-hover.svg") no-repeat center center/100%; }
+  .button:active {
+    background: url("../img/body/btn-link-active.svg") no-repeat center center/100%; }
+
+a.button {
+  text-decoration: none;
+  margin: 0 20px 10px 0; }
 
 /*# sourceMappingURL=style.css.map */
