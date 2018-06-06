@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-    <title>Priroda i društvo 3</title>
+    <title>Uvod -PID3</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,9 +30,17 @@
 
         <div class="top-left-down">
             <div class="zadatak">
+                Pogledaj
+            </div>
+            <div class="prikaz-row video-row-center">
+                <div class="prikaz">prvo</div><a class="video">video</a><div class="prikaz">a onda na</div>
+            </div>
+            <div class="zadatak">
                 Zadatak
             </div>
-            <div class="prikaz">Prikazat će se <span>6</span> slika na <span>40</span> sekundi</div>
+            <div class="prikaz-row">
+                <div class="prikaz">gdje će se prikazati</div> <div class="prikaz"><span> 6 </span> slika na <span> 40 </span> sekundi</div>
+            </div>
         </div>
 
     <section class="middle">
@@ -56,5 +64,47 @@
     </section>
     </div>
 </div>
+
+<div id="modal" class="hero-overlay" style="display: none;> <!--"-->
+    <div class="hero-popup">
+        <a class="clo close">X</a>
+        <video controls>
+            <source src="video/01-orijentacija.mp4" type="video/mp4">
+            Vaš preglednik ne podržava HTML5 video.
+        </video>
+    </div>
+</div>
+
+<script>
+    function pauseVid() {
+        video.pause();
+        video.volume = 0;
+    }
+    const video = document.querySelector(".video");
+    const videoControls = document.querySelector("video");
+    const closeicon = document.querySelector(".close");
+    const modal = document.getElementById("modal");
+
+    video.addEventListener("click", function(){
+        modal.style.display = "block";
+        videoControls.setAttribute("autoplay","");
+    });
+
+    closeicon.addEventListener("click", function(){
+        modal.style.display = "none";
+        videoControls.removeAttribute("autoplay");
+
+        pauseVid();
+
+    });
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            video.pause();
+        }
+    }
+</script>
+
 </body>
 </html>

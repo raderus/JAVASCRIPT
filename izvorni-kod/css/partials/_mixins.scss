@@ -16,8 +16,9 @@
     font-family: 'Roboto Slab', serif;
   }
   .wrapper {
+    width: 100%;
     max-width: 1024px;
-    margin: 0 auto;
+    margin: 60px auto;
     background-color: $lightblue;
   }
 }
@@ -107,7 +108,8 @@
     padding: 20px;
     background: $lightblue;
     border-radius: 5px;
-    width: 85%;
+    width: 90%;
+    max-width: 1140px;
     position: relative;
     transition: all 5s ease-in-out;
     z-index: 501;
@@ -127,12 +129,32 @@
       text-decoration: none;
       color: $darkblue;
       cursor: pointer;
+      font-weight: 300;
     }
     .close:hover {
       color: white;
       padding: 3px 5px;
       background: #d30f0f;
       cursor: pointer;
+      border-radius: 4px;
+    }
+
+    animation-name: video;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  @keyframes video {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+      transform: rotate3d(20,20,20,90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      transform: rotate3d(0,0,0,0deg);
     }
   }
   .hero-popup .hero-cloud,

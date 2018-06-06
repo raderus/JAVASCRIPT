@@ -9,7 +9,9 @@ Autor: Radovan Rus
 
 WEB app
 
-Verzija: Release Canditate 3, RC3 
+Verzija: 1.0
+
+(c) copyright, TVZ (Tehničko Veleučilište Zagreb) i Radovan Rus
 
 DEMO:
 http://radiusgraphics.eu/tvzmc2/

@@ -276,8 +276,6 @@ h4 {
     @include flexCenter;
   }
   .wrapper {
-    width: 100%;
-    margin-top: 5%;
     @include mainShadow;
   }
 }

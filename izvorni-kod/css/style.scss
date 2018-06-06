@@ -3,7 +3,8 @@
 @import "partials/mixins";
 @import "partials/mobile";
 @include body;
-
+@include button;
+@include modal;
 
 .main-grid {
   display: grid;
@@ -91,7 +92,7 @@ h3 {
 .top-right {
   background: url("../img/body/oblaci-grupa.svg") no-repeat top right;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   @media screen and (min-width: 1025px) {
     min-height: 19rem;
   }
@@ -102,7 +103,7 @@ h3 {
   width: 85%;
   min-height: 12rem;
   @include flexCenter;
-  @media screen and (min-width: 569px) and (max-width: 729px) {margin-bottom: 3rem;}
+  @media screen and (min-width: 569px) and (max-width: 730px) {transform: translateY(-50%)}
 }
 .pojmovnik {
   @include flexCenter;
@@ -139,7 +140,9 @@ h3 {
   flex-direction: column;
   position: relative;
   flex-basis: auto;
-  height: 140px;
+  min-height: 160px;
+  padding-left: 1.4rem;
+  flex-wrap: wrap;
 }
 .zadatak {
   font-family: 'Roboto Slab', serif;
@@ -147,22 +150,53 @@ h3 {
   color: $darkblue;
   font-size: 26px;
   background: url("../img/body/oblak-zadatak.svg") no-repeat;
-  margin: 1rem 0 0 3rem;
-  display: inline-block;
+  margin: 1rem 0 0 0;
   padding: 14px 18px 18px 18px;
-  z-index: 10;
-  position: absolute;
+}
+.video {
+  @include flexCenter;
+  width: 100px;
+  height: 50px;
+  margin: 0 10px;
+  color: $white;
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  transition: .3s all;
+  cursor: pointer;
+  background: url("../img/body/video-btn-link.svg") $imgBackground;
+  &:hover {
+    background: url("../img/body/video-btn-hover.svg") $imgBackground;;
+    transform: scale(1.1);
+  }
+}
+.prikaz-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .prikaz {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: $default;
+  display: flex;
+  font-size: 18px;
   margin: 0 0 1rem 0;
   color: $darkblue;
+  margin: 10px 0 0 0;
   span{
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: 500;
+    padding: 0 10px;
+    transform: translateY(-10px);
+  }
+  @media screen and (max-width: 568px) {
+    &:last-child {
+      margin: 10px 20px 0 0;
+    }
+  }
+}
+.video-row-center {
+  @media screen and (min-width: 800px) {
+    align-self: center;
   }
 }
 .border-blue-1 {
@@ -371,6 +405,18 @@ h3 {
   color: inherit;
   text-decoration: none;
 }
+video {
+  width: 100%;
+  height: auto;
+  padding: 30px 40px;
+}
+.hero-popup {
+  padding: 0 !important;
+}
+.close {
+  top: 5px !important;
+  right: 10px !important;
+}
 
 
 @media screen and (max-width: 568px) {
@@ -392,9 +438,6 @@ h3 {
     transform: translate(5px, 10px);
     h1 {
       font-size: 2.8rem;}
-  }
-  .prikaz {
-    margin-right: 10%;
   }
   .bullets {
     width: 90%;
@@ -430,8 +473,6 @@ h3 {
   }
   .wrapper {
     width: 100%;
-    margin-top: 5%;
     @include mainShadow;
   }
 }
-@include button;

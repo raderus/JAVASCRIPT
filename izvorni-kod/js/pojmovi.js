@@ -136,22 +136,24 @@ mainRight.forEach(function (item) {
     txt.classList.add('txt');
     txt.classList.add('popup');
 
+    // Popup Tooltip with funcions
+    txt.addEventListener('mouseover',createTip);
+    txt.addEventListener('mouseout',cancelTip);
+
     // Safari iOS bug fix
-    function isAppleDevice() {
+    /*function isAppleDevice() {
         return (
             (navigator.userAgent.toLowerCase().indexOf("ipad") > -1) ||
             (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
             (navigator.userAgent.toLowerCase().indexOf("ipod") > -1)
         );
     }
-    /*if (isAppleDevice()) {
+    if (isAppleDevice()) {
         txt.addEventListener('touchstart',createTip);
         txt.addEventListener('touchend',cancelTip);
-    } else {*/
-        // Popup Tooltip with funcions
-        txt.addEventListener('mouseover',createTip);
-        txt.addEventListener('mouseout',cancelTip);
-    /*}*/
+    } else {
+
+    }*/
 
     // Append elements to the section
     pojmovi.appendChild(ime);

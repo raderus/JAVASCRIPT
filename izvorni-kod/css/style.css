@@ -14,9 +14,130 @@ h1, h2, h3 {
   font-family: 'Roboto Slab', serif; }
 
 .wrapper {
+  width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 60px auto;
   background-color: #C0FBFF; }
+
+.buttons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.button {
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  outline: none;
+  height: 60px;
+  width: 180px;
+  line-height: 40px;
+  color: white;
+  border: none;
+  transition: ease-in .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/body/btn-link.svg") no-repeat center center/100%; }
+  .button:hover {
+    background: url("../img/body/btn-link-hover.svg") no-repeat center center/100%; }
+  .button:active {
+    background: url("../img/body/btn-link-active.svg") no-repeat center center/100%; }
+
+a.button {
+  text-decoration: none;
+  margin: 0 20px 10px 0; }
+
+.hero-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  padding-top: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  opacity: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%; }
+  @media screen and (max-width: 480px) {
+    .hero-overlay {
+      padding-top: 20px; } }
+
+.hero-overlay:target {
+  visibility: visible;
+  opacity: 1; }
+
+.hero-popup {
+  margin: auto;
+  padding: 20px;
+  background: #C0FBFF;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 1140px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 501;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: video;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: none;
+  animation-play-state: running; }
+  .hero-popup h2 {
+    margin: 0 0 15px 0;
+    color: #2f82c8;
+    font-weight: 300; }
+  .hero-popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2f82c8;
+    cursor: pointer;
+    font-weight: 300; }
+  .hero-popup .close:hover {
+    color: white;
+    padding: 3px 5px;
+    background: #d30f0f;
+    cursor: pointer;
+    border-radius: 4px; }
+
+@keyframes video {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+    transform: rotate3d(20, 20, 20, 90deg); }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: rotate3d(0, 0, 0, 0deg); } }
+.hero-popup .hero-cloud,
+.statistika {
+  overflow: auto;
+  text-align: center; }
+
+.hero-cloud {
+  background: url("../img/body/oblak-pojmovnik-v.svg") no-repeat center center/100%;
+  width: 200px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .hero-cloud h2 {
+    font-size: 1.8em;
+    transform: translate(0, 7px); }
+
+.hero-show {
+  visibility: visible !important;
+  opacity: 1 !important; }
 
 .main-grid {
   display: grid;
@@ -105,7 +226,7 @@ h3 {
 .top-right {
   background: url("../img/body/oblaci-grupa.svg") no-repeat top right;
   display: flex;
-  align-items: flex-end; }
+  align-items: center; }
   @media screen and (min-width: 1025px) {
     .top-right {
       min-height: 19rem; } }
@@ -117,9 +238,9 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media screen and (min-width: 569px) and (max-width: 729px) {
+  @media screen and (min-width: 569px) and (max-width: 730px) {
     .top-right-down {
-      margin-bottom: 3rem; } }
+      transform: translateY(-50%); } }
 
 .pojmovnik {
   display: flex;
@@ -157,7 +278,9 @@ h3 {
   flex-direction: column;
   position: relative;
   flex-basis: auto;
-  height: 140px; }
+  min-height: 160px;
+  padding-left: 1.4rem;
+  flex-wrap: wrap; }
 
 .zadatak {
   font-family: 'Roboto Slab', serif;
@@ -165,22 +288,51 @@ h3 {
   color: #2f82c8;
   font-size: 26px;
   background: url("../img/body/oblak-zadatak.svg") no-repeat;
-  margin: 1rem 0 0 3rem;
-  display: inline-block;
-  padding: 14px 18px 18px 18px;
-  z-index: 10;
-  position: absolute; }
+  margin: 1rem 0 0 0;
+  padding: 14px 18px 18px 18px; }
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  transition: .3s all;
+  cursor: pointer;
+  background: url("../img/body/video-btn-link.svg") no-repeat center center/100%; }
+  .video:hover {
+    background: url("../img/body/video-btn-hover.svg") no-repeat center center/100%;
+    transform: scale(1.1); }
+
+.prikaz-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
 
 .prikaz {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 17px;
+  display: flex;
+  font-size: 18px;
   margin: 0 0 1rem 0;
-  color: #2f82c8; }
+  color: #2f82c8;
+  margin: 10px 0 0 0; }
   .prikaz span {
-    font-size: 1.4em;
-    font-weight: 500; }
+    font-size: 1.8em;
+    font-weight: 500;
+    padding: 0 10px;
+    transform: translateY(-10px); }
+  @media screen and (max-width: 568px) {
+    .prikaz:last-child {
+      margin: 10px 20px 0 0; } }
+
+@media screen and (min-width: 800px) {
+  .video-row-center {
+    align-self: center; } }
 
 .border-blue-1 {
   position: absolute;
@@ -389,6 +541,18 @@ h3 {
   color: inherit;
   text-decoration: none; }
 
+video {
+  width: 100%;
+  height: auto;
+  padding: 30px 40px; }
+
+.hero-popup {
+  padding: 0 !important; }
+
+.close {
+  top: 5px !important;
+  right: 10px !important; }
+
 @media screen and (max-width: 568px) {
   .heading {
     margin: 30px 0 0 30px; }
@@ -408,9 +572,6 @@ h3 {
     transform: translate(5px, 10px); }
     .pojmovnik h1 {
       font-size: 2.8rem; }
-
-  .prikaz {
-    margin-right: 10%; }
 
   .bullets {
     width: 90%;
@@ -442,38 +603,8 @@ h3 {
 
   .wrapper {
     width: 100%;
-    margin-top: 5%;
     -webkit-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.25); } }
-.buttons {
-  margin: 15px 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.button {
-  font-size: 17px;
-  font-family: 'Roboto Slab', serif;
-  outline: none;
-  height: 60px;
-  width: 180px;
-  line-height: 40px;
-  color: white;
-  border: none;
-  transition: ease-in .3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("../img/body/btn-link.svg") no-repeat center center/100%; }
-  .button:hover {
-    background: url("../img/body/btn-link-hover.svg") no-repeat center center/100%; }
-  .button:active {
-    background: url("../img/body/btn-link-active.svg") no-repeat center center/100%; }
-
-a.button {
-  text-decoration: none;
-  margin: 0 20px 10px 0; }
 
 /*# sourceMappingURL=style.css.map */
