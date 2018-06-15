@@ -1,5 +1,7 @@
 # MC2
-Natjecanje MC2 – Tehničko Veleučilište Zagreb, 
+Natjecanje MC2 – Tehničko Veleučilište Zagreb
+
+Natjecanje završeno 08.06.2018.
 
 Godina 2018. 
 
@@ -9,10 +11,10 @@ Autor: Radovan Rus
 
 WEB app
 
-Verzija: 1.0
+Verzija: a/a 
 
 (c) copyright, TVZ (Tehničko Veleučilište Zagreb) i Radovan Rus
 
-DEMO:
-http://radiusgraphics.eu/tvzmc2/
+Kontakt:
+https://radiusgraphics.eu/contact.html
 
