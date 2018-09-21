@@ -1,9 +1,7 @@
-# MC2
-Natjecanje MC2 – Tehničko Veleučilište Zagreb
+# Jvascript
+Ovaj projekt je rađen za natjecanje MC2 pri Tehničkom Veleučilištu u Zagrebu. Tema je bila edukativna aplikacija za razrednu nastavu.
 
-Natjecanje završeno 08.06.2018.
-
-Godina 2018. 
+Natjecanje završeno 08.06.2018. Aplikacija je ušla u finale i osvojila 8. mjesto. 
 
 Naziv: Priroda i društvo za 3. razred – Pojmovnik
 
@@ -11,10 +9,7 @@ Autor: Radovan Rus
 
 WEB app
 
-Verzija: a/a 
+(c) copyright Radovan Rus
 
-(c) copyright, TVZ (Tehničko Veleučilište Zagreb) i Radovan Rus
 
-Kontakt:
-https://radiusgraphics.eu/contact.html
 
