@@ -1,0 +1,109 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/mobile";
+@include body;
+@include button;
+body {font-size: 18px;}
+#video {
+  background: url("../img/body/oblaci-grupa.svg") top right no-repeat / 50%;
+  padding: 20px 30px;
+  div {margin: 0 0 65px 0;}
+  span {color: red;}
+  @media screen and (min-width: 769px) {
+    position: relative;
+  }
+}
+.logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @media screen and (max-width: 769px) {
+    justify-content: flex-start;
+  }
+}
+.logo {
+  background: url("../img/body/oblak-pojmovnik-v.svg") $imgBackground;
+  margin: 30px 0 20px 0;
+  @include flexCenter;
+  width: 380px;
+  height: 200px;
+  transform: translate(0,-10px);
+  h2 {
+    font-weight: 300;
+    font-size: 2.8em;
+  }
+  @media screen and (max-width: 769px) {
+    width: 280px;
+    height: 140px;
+    h2 {
+      font-weight: 300;
+      font-size: 2em;
+    }
+  }
+}
+/** Main **/
+video {
+  width: 100%;
+  height: auto;
+}
+
+/** Bottom**/
+.bottom {
+  min-height: 180px;
+  background: url("../img/body/brdo.svg") no-repeat center top / 100%;
+  background-size: cover;
+  display: flex;
+  color: $white;
+  margin-top: -10px;
+}
+.button-video {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  a {
+    animation-name: video;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 106s;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+}
+@keyframes video {
+  0% {
+
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
+  .shadow {
+    max-width: 1024px;
+    margin: auto;
+    @include flexCenter;
+  }
+  .wrapper {
+    width: 100%;
+    margin: 60px 0;
+    @include mainShadow;
+  }
+}
+
+
+
+@include mobileWarning;

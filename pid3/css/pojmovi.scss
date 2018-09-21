@@ -1,0 +1,422 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/popuptext";
+@import "partials/mobile";
+@include body;
+
+body {color: $darkblue}
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+  "top-left top-right"
+  "main main"
+  "bottom bottom";
+}
+
+.top-left { grid-area: top-left; }
+.top-right {
+  grid-area: top-right;
+  align-self: end;
+}
+.main-left {
+  width: 75%;
+  position: relative;
+}
+.main-right {
+  width: 25%;
+}
+.main {
+  grid-area: main;
+  display: flex;
+}
+.bottom { grid-area: bottom; }
+
+/** HEADER **/
+.pid img {
+  max-width: 140px;
+  max-height: 100px;
+  margin: 50px 0 5px 40px;
+}
+.pojmovnik {
+  @include flexCenter;
+  background: url("../img/body/oblak-pojmovnik-v.svg") no-repeat bottom left;
+  width: 100%;
+  height: 100px;
+  margin: 50px 0 5px 0;
+  h4 {
+    position: relative;
+    margin-left: -30px;
+      img {
+        width: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 5px -18px 0 0;
+      }
+    }
+}
+/*** MAIN ***/
+.main {margin: 0 20px;}
+.grid {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.term-grid {width: 100%;}
+.pojmovnik {
+  margin-bottom: 1.2rem;
+}
+.pojam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+.txt {
+  background: url("../img/body/pojam-bijelo.svg") no-repeat center center / 100%;
+  height: 44px;
+  width: 170px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    transition: all .2s linear;
+    transform: scale(1.05);
+  }
+  &:active {
+    font-weight: 900;
+    transition: all .2s linear;
+  }
+}
+.match {
+  animation-name: matched;
+  animation-duration: 0.4s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes matched {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.match .txt {
+  opacity: 0.6;
+  color: $darkblue;
+  background: url("../img/body/btn-bijeli.svg") $imgBackground !important;
+  font-weight: 500;
+  &:hover {
+    font-weight: 400;}
+  transform: scale(1);
+}
+.pojam {
+  color: white;
+  &:nth-child(1) .txt {
+    background: url("../img/body/btn-lila.svg") $imgBackground;
+  }
+  &:nth-child(2) .txt {
+    background: url("../img/body/btn-ljubicasti.svg") $imgBackground;
+  }
+  &:nth-child(3) .txt {
+    background: url("../img/body/btn-plavi.svg") $imgBackground;
+  }
+  &:nth-child(4) .txt {
+    background: url("../img/body/btn-zeleni.svg") $imgBackground;
+  }
+  &:nth-child(5) .txt {
+    background: url("../img/body/btn-zuti.svg") $imgBackground;
+  }
+  &:nth-child(6) .txt {
+    background: url("../img/body/btn-narancasti.svg") $imgBackground;
+  }
+}
+.card {
+  margin: 0 0 15px 0;
+  position: relative;
+  transition: all .3s linear;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.back, .front, .card {
+  min-width: 220px;
+  min-height: 150px;
+  max-width: 360px;
+  max-height: 240px;
+}
+.back, .front {
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 14px;
+}
+.front {
+  z-index: 2;
+  background: url('../img/pojmovi/oko.svg') $imgBackground;
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-size: 98%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#memo .grid .selected {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/** BOTTOM **/
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 0 15px 35px;
+  .bottom-txt {display: inline-block;}
+  @media screen and (min-width: 768px) {
+    width: 73%;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+.bottom {
+  min-height: 180px;
+  background: url("../img/body/brdo.svg") no-repeat center top / 100%;
+  background-size: cover;
+  display: flex;
+  color: $white;
+  align-items: center;
+  figure {
+    display: inline-block;
+    font-size: 1.4em;
+    width: 48px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+  }
+}
+.vrijeme {
+  & > figure {
+    background: url("../img/body/vrijeme.svg") $imgBackground;
+    width: 74px;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+.pokusaj {
+  & > figure {
+    background: url("../img/body/pokusaji.svg") $imgBackground;
+  }
+}
+.pogodak {
+  & > figure {
+    background: url("../img/body/pogodaka.svg") $imgBackground;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 920px) {
+  .pojmovnik {
+    @include flexCenter;
+    transform: translateX(-17px);
+    h4 {transform: translate(10px,10px)}
+  }
+}
+@media screen and (max-width: 767px) {
+  .main {
+    margin: 0 10px;
+  }
+  .main-grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+            "top-right"
+            "main"
+            "bottom";
+  }
+  .top-left {
+    display: none;
+  }
+  .pojmovnik {
+    transform: translateX(20px);
+    padding-left: 20px;
+    margin-bottom: 10px;
+    width: 240px;
+  }
+  .main {flex-direction: column;}
+  .main-left, .main-right {
+    width: 100%;
+    display: flex;
+  }
+  .main-right {order: 1;}
+  .main-left {order: 2;}
+  .pojmovi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 25px 0;
+  }
+  .bottom-container {
+    width: 100%;
+    & > div {margin-right: 20px;}
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .pojmovi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 359px) {
+      grid-template-columns: 1fr;
+    }
+    margin: 25px 0;
+  }
+}
+@media screen and (max-width: 361px) {
+  .main {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .shadow {
+    max-width: 1024px;
+    margin: auto;
+    @include flexCenter;
+  }
+  .wrapper {
+    @include mainShadow;
+  }
+}
+/** Cards overly **/
+.picture-grid {
+  position: relative;
+}
+.timeGrid {
+  visibility: hidden;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  margin-top: -15px;
+  padding-top: 15px; ;
+  border-radius: 5px;
+}
+.timeCard {
+  min-width: 220px;
+  min-height: 150px;
+  max-width: 360px;
+  max-height: 240px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10px;
+  margin: 0 0 15px 0;
+}
+.term-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  z-index: 50;
+}
+.card.match .front {
+  background: url("../img/pojmovi/checked.svg") $imgBackground;
+  opacity: 0.80;
+}
+.card.match .back {
+  backface-visibility: visible;
+  background-size: 99%;
+}
+.oznaka {font-weight: bold;}
+.oznaka span {
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  background: url("../img/body/oblak-zadatak.svg") $imgBackground;
+  padding: 21px 20px 26px 20px;
+  margin: 0 4px;
+}
+.memo-now {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  cursor: pointer;
+  transform: translate(-50%, 47px);
+  z-index: 550;
+
+  animation-name: memoNow;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes memoNow {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@include timeAnimation;
+@media screen and (max-width: 679px) {
+  .back, .front, .card, .timeCard {
+    min-width: 180px;
+    min-height: 120px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .back, .front, .card, .timeCard {
+    min-width: 165px;
+    min-height: 110px;
+    max-width: 165px;
+    max-height: 110px;
+  }
+}
+
+@include button;
+@include mobileWarning;
+@include popup;
+@include modal;
+

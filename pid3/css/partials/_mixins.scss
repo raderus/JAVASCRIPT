@@ -1,0 +1,216 @@
+
+@mixin body {
+  *{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: $default;
+    color: $darkblue;
+  }
+  h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 1024px;
+    background-color: $lightblue;
+    @media screen and (min-width: 1025px) {
+      margin: 60px auto;
+    }
+  }
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin border-blue {
+  position: absolute;
+  margin-left: 5.5rem;
+  border-left: 1px dashed $darkblue;
+}
+@mixin popupShadow {
+  -webkit-box-shadow: 10px 12px 26px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 12px 26px -10px rgba(0,0,0,0.75);
+  box-shadow: 10px 12px 26px -10px rgba(0,0,0,0.75);
+}
+@mixin mainShadow {
+  -webkit-box-shadow: 0px 2px 38px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 38px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 38px 2px rgba(0,0,0,0.25);
+}
+@mixin blueBox {
+  background: -webkit-linear-gradient(to right, #0056A4, #0075BE);
+  background: linear-gradient(to right, #0056A4, #0075BE);
+}
+@mixin blueBoxHover {
+  background: -webkit-linear-gradient(to left, #0056A4, #0075BE);
+  background: linear-gradient(to left, #0056A4, #0075BE);
+}
+@mixin blueBoxActive {
+  background: -webkit-linear-gradient(to left, #ddd, #fff);
+  background: linear-gradient(to left, #ddd, #fff);
+}
+@mixin timeAnimation {
+  .timeShow {
+    visibility: visible;
+    background-color: $lightblue;
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  @keyframes stretch {
+    0% {
+      border-radius: 5px;
+      opacity: 0.4;
+      transform: translateY(20%);
+    }
+    50% {
+      background-color: white;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@mixin modal {
+  .hero-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    padding-top: 70px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    opacity: 1;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 480px) {
+      padding-top: 20px;
+    }
+  }
+  .hero-overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hero-popup {
+    margin: auto;
+    padding: 20px;
+    background: $lightblue;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 1140px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    z-index: 501;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    h2 {
+      margin: 0 0 15px 0;
+      color: $darkblue;
+      font-weight: 300;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: $darkblue;
+      cursor: pointer;
+      font-weight: 300;
+    }
+    .close:hover {
+      color: white;
+      padding: 3px 5px;
+      background: #d30f0f;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    animation-name: video;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  @keyframes video {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+      transform: rotate3d(20,20,20,90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      transform: rotate3d(0,0,0,0deg);
+    }
+  }
+  .hero-popup .hero-cloud,
+  .statistika {
+    overflow: auto;
+    text-align: center;
+  }
+  .hero-cloud {
+    background: url("../img/body/oblak-pojmovnik-v.svg") $imgBackground;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto;
+    @include flexCenter;
+    h2 {
+      font-size: 1.8em;
+      transform: translate(0,7px);
+    }
+  }
+
+  .hero-show {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@mixin button {
+  .buttons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .button {
+    font-size: 17px;
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+    height: 60px;
+    width: 180px;
+    line-height: 40px;
+    color: $white;
+    border: none;
+    transition: ease-in .3s;
+    cursor: pointer;
+    @include flexCenter;
+    background: url("../img/body/btn-link.svg") $imgBackground;
+    &:hover {
+      background: url("../img/body/btn-link-hover.svg") $imgBackground;
+    }
+    &:active {
+      background: url("../img/body/btn-link-active.svg") $imgBackground;
+    }
+  }
+
+  a.button {
+    text-decoration: none;
+    margin: 0 20px 10px 0;
+  }
+}

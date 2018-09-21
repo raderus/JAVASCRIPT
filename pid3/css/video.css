@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  color: #2f82c8; }
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  background-color: #C0FBFF; }
+  @media screen and (min-width: 1025px) {
+    .wrapper {
+      margin: 60px auto; } }
+
+.buttons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.button {
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  outline: none;
+  height: 60px;
+  width: 180px;
+  line-height: 40px;
+  color: white;
+  border: none;
+  transition: ease-in .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/body/btn-link.svg") no-repeat center center/100%; }
+  .button:hover {
+    background: url("../img/body/btn-link-hover.svg") no-repeat center center/100%; }
+  .button:active {
+    background: url("../img/body/btn-link-active.svg") no-repeat center center/100%; }
+
+a.button {
+  text-decoration: none;
+  margin: 0 20px 10px 0; }
+
+body {
+  font-size: 18px; }
+
+#video {
+  background: url("../img/body/oblaci-grupa.svg") top right no-repeat/50%;
+  padding: 20px 30px; }
+  #video div {
+    margin: 0 0 65px 0; }
+  #video span {
+    color: red; }
+  @media screen and (min-width: 769px) {
+    #video {
+      position: relative; } }
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  @media screen and (max-width: 769px) {
+    .logo-container {
+      justify-content: flex-start; } }
+
+.logo {
+  background: url("../img/body/oblak-pojmovnik-v.svg") no-repeat center center/100%;
+  margin: 30px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  height: 200px;
+  transform: translate(0, -10px); }
+  .logo h2 {
+    font-weight: 300;
+    font-size: 2.8em; }
+  @media screen and (max-width: 769px) {
+    .logo {
+      width: 280px;
+      height: 140px; }
+      .logo h2 {
+        font-weight: 300;
+        font-size: 2em; } }
+
+/** Main **/
+video {
+  width: 100%;
+  height: auto; }
+
+/** Bottom**/
+.bottom {
+  min-height: 180px;
+  background: url("../img/body/brdo.svg") no-repeat center top/100%;
+  background-size: cover;
+  display: flex;
+  color: white;
+  margin-top: -10px; }
+
+.button-video {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px; }
+  .button-video a {
+    animation-name: video;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 106s;
+    animation-fill-mode: none;
+    animation-play-state: running; }
+
+@keyframes video {
+  25% {
+    transform: scale(1.2); }
+  50% {
+    transform: scale(1); }
+  75% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+@media screen and (min-width: 1025px) {
+  .shadow {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+  .wrapper {
+    width: 100%;
+    margin: 60px 0;
+    -webkit-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 38px 2px rgba(0, 0, 0, 0.25); } }
+@media screen and (orientation: portrait) and (max-width: 359px) {
+  .mobile-warning {
+    width: 100vw;
+    min-height: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    font-weight: 700;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+    .mobile-warning .mobile-wrap {
+      text-align: center;
+      width: 50%; } }
+    @media screen and (orientation: portrait) and (max-width: 359px) and (min-width: 768px) {
+      .mobile-warning .mobile-wrap {
+        width: 35%; } }
+@media screen and (orientation: portrait) and (max-width: 359px) {
+      .mobile-warning .mobile-wrap img {
+        margin-top: 1.5rem;
+        width: 100%;
+        -webkit-animation: rotating 1.5s ease-in-out infinite;
+        -moz-animation: rotating 1.5s ease-in-out infinite;
+        -ms-animation: rotating 1.5s ease-in-out infinite;
+        -o-animation: rotating 1.5s ease-in-out infinite;
+        animation: rotating 1.5s ease-in-out infinite; }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    to {
+      -ms-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); } } }
+/*@media screen and (orientation: portrait) and (min-width: 359px) {
+  .mobile-warning {display: none;}
+}*/
+@media screen and (min-width: 360px) {
+  .mobile-warning {
+    display: none; } }
+
+/*# sourceMappingURL=video.css.map */

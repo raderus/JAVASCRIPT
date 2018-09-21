@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 157.7 113" style="enable-background:new 0 0 157.7 113;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.1;fill:#FDFDFD;}
+</style>
+<g id="XMLID_90_">
+	<g id="XMLID_93_">
+		<g id="XMLID_94_">
+			<defs>
+				<path id="XMLID_95_" d="M156.5,103.8c0,4.4-3.6,8-8,8H9.5c-4.4,0-8-3.6-8-8v-95c0-4.4,3.6-8,8-8h139c4.4,0,8,3.6,8,8V103.8z"/>
+			</defs>
+			<linearGradient id="XMLID_116_" gradientUnits="userSpaceOnUse" x1="1.491" y1="56.3224" x2="156.491" y2="56.3224">
+				<stop  offset="4.316910e-002" style="stop-color:#0056A4"/>
+				<stop  offset="1" style="stop-color:#0075BE"/>
+			</linearGradient>
+			<use xlink:href="#XMLID_95_"  style="overflow:visible;fill:url(#XMLID_116_);"/>
+			<clipPath id="XMLID_117_">
+				<use xlink:href="#XMLID_95_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+	</g>
+	<path id="XMLID_158_" class="st0" d="M116.1,53.1C108.7,40.5,94.8,32,79,32c-15.8,0-29.7,8.4-37.1,21.1c-1.2,2-1.2,4.4,0,6.4
+		C49.3,72.2,63.2,80.6,79,80.6c15.8,0,29.7-8.4,37.1-21.1C117.3,57.6,117.3,55.1,116.1,53.1L116.1,53.1z M79,74.3
+		c-9.9,0-17.9-8-17.9-17.9c0-9.9,8-17.9,17.9-17.9c9.9,0,17.9,8,17.9,17.9C96.9,66.2,88.9,74.3,79,74.3z M92.7,56.3
+		C92.7,63.9,86.6,70,79,70c-7.6,0-13.7-6.1-13.7-13.7c0-2.3,0.6-4.5,1.6-6.5l0,0c0,3.1,2.5,5.7,5.7,5.7c3.1,0,5.7-2.5,5.7-5.7
+		c0-3.1-2.5-5.7-5.7-5.7l0,0c1.9-1,4.1-1.6,6.5-1.6C86.6,42.6,92.7,48.7,92.7,56.3z"/>
+</g>
+</svg>
